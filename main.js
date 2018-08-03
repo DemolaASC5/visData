@@ -1,5 +1,5 @@
 // document.getElementById("data").innerHTML = data.results[0].name.first ;
-let index = 0; //Math.round(Math.random()*9); 
+let index = Math.round(Math.random()*4); 
 let firstName = data.results[index].name.first;
 let lastName = data.results[index].name.last; 
 let fullname = document.querySelector('#name');
@@ -140,3 +140,8 @@ let street5 = data.results[index].location.street;
 let address5 = document.querySelector('#address5'); 
 address5.innerText = street5 + ", " + city5 + ", " + state5; 
 index++; 
+
+const connection = document.addEventListener('click',onClick)
+function onClick(event){
+    alert("Request sent successfully. Refresh the page for more connections.");
+}
